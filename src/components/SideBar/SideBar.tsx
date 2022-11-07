@@ -12,7 +12,7 @@ export const SideBar=()=>{
   return (
     <aside className="w-72 h-full">
       <div className="py-4 pl-7 pr-3 h-full
-      bg-gray-50 rounded dark:bg-gray-800">
+      bg-gray-100 rounded dark:bg-gray-800">
         
         <div className="w-56 h-60 mt-1 mb-2 
           overflow-hidden

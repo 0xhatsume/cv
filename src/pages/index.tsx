@@ -60,11 +60,20 @@ const Home: NextPage=()=>{
                 space-x-1 px-2
                 w-full
                 ">
-                  <img className="w-1/3" src={`${isProd ? gitAddressPrefix : ''}/img/platedao1.PNG`}></img>
-                  <img className="w-1/3" src={`${isProd ? gitAddressPrefix : ''}/img/platedao2.PNG`}></img>
-                  <img className="w-1/3" src={`${isProd ? gitAddressPrefix : ''}/img/platedao3.PNG`}></img>
+                  <a className="" href={`${isProd ? gitAddressPrefix : ''}/img/platedao1.PNG`} target={"_blank"}>
+                  <img className="drop-shadow-2xl rounded-lg hover:border-blue-600 hover:border-2" src={`${isProd ? gitAddressPrefix : ''}/img/platedao1.PNG`}/>
+                  </a>
+                  
+                  <a href={`${isProd ? gitAddressPrefix : ''}/img/platedao2.PNG`} target={"_blank"}>
+                  <img className="drop-shadow-2xl rounded-lg hover:border-blue-600 hover:border-2" src={`${isProd ? gitAddressPrefix : ''}/img/platedao2.PNG`}/>
+                  </a>
+
+                  <a href={`${isProd ? gitAddressPrefix : ''}/img/platedao3.PNG`} target={"_blank"}>
+                  <img className="drop-shadow-2xl rounded-lg hover:border-blue-600 hover:border-2" src={`${isProd ? gitAddressPrefix : ''}/img/platedao3.PNG`}/>
+                  </a>
+
                 </div>
-                <ul className='list-disc text-base px-5'>
+                <ul className='list-disc text-base px-5 mt-3'>
                   <li>Index Fund Contract (fork/modified Pie DAO)</li>
                   <li>
                     <a className="text-blue-700 hover:text-blue-400"
@@ -76,6 +85,7 @@ const Home: NextPage=()=>{
                 </ul>
               </div>
 
+              {/* Dutch Contract Gig */}
               <div className='my-4'>
                 <div className='font-bold mb-2'>Dutch Auction Contract</div>
                 <ul className='list-disc text-base px-5'>
@@ -83,6 +93,7 @@ const Home: NextPage=()=>{
                   </ul>
               </div>
               
+              {/* Shizzy Gig */}
               <div className='my-4'>
                 <div className='font-bold mb-2'>Private Artist Creator Contract</div>
                 <ul className='list-disc text-base px-5'>
