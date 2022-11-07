@@ -1,10 +1,12 @@
 import { url } from 'inspector';
 import React from 'react';
 import { 
+    TwitterDeets, TelegramDeets,
     EmailDeets, PhoneDeets,
     LocationDeets, GithubDeets 
   } from './ListItems';
 import { isProd, gitAddressPrefix } from '../../config/constants';
+import CVjson from '../../config/cvfields/cv.json';
 
 export const SideBar=()=>{
   return (
@@ -20,16 +22,22 @@ export const SideBar=()=>{
           <img className="" src={`${isProd ? gitAddressPrefix : ''}/img/hatsumedev.jpg`}/>
           </div>
         <ul className="">
-
+          
+          {/* CONTACTS */}
           <li className="font-bold text-lg my-2 mt-5">CONTACT
             <ul className="font-normal flex flex-col mt-1 pl-1">
+              <TwitterDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://twitter.com/0xhatsume" linktext="twitter.com/0xhatsume"/>
+              <TelegramDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://t.me/oxHatsume" linktext="t.me/oxHatsume"/>
+              <GithubDeets alinkclass="underline text-blue-700 hover:text-blue-300" 
+                link="https://github.com/0xhatsume" linktext="github.com/0xhatsume"/>
               <EmailDeets linktext="0xhatsume@gmail.com"/>
-              <PhoneDeets linktext={"(upon request)"}/>
+              {/* <PhoneDeets linktext={"(upon request)"}/> */}
               <LocationDeets linktext="Singapore"/>
-              <GithubDeets link="https://github.com/0xhatsume" linktext="github.com/0xhatsume"/>
+              
             </ul>
-          </li>
+            </li>
 
+          {/* SKILL/STACK */}
           <li>
             <div className='font-bold text-lg mt-4'>
             SKILLS/STACK
@@ -69,136 +77,23 @@ export const SideBar=()=>{
             <hr className='my-3 h-px bg-gray-300 drop-shadow border-0'/>
             
             <div className='flex flex-wrap'>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                EVM
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Solana-Stack
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Next.Js / React
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Hardhat
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Metaplex
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Tensorflow
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Pytorch
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Streamlit
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                FastApi
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Airflow
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                NLP
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                MLflow
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Docker
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Elasticsearch Stack
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                PostgreSQL
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                MongoDB
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Neo4J/Cypher
-              </div>
-              <div className="
-                w-fit text-xs mr-0.5 mb-1
-                px-1 py-0.5 
-                bg-white 
-                border border-gray-500 rounded-lg">
-                Kubernetes
-              </div>
+              {   CVjson.stack.map((w, i)=>{
+                    return (
+                      <div key={`stack${i}`}
+                        className="
+                        w-fit text-xs mr-0.5 mb-1
+                        px-1 py-0.5 
+                        bg-white 
+                        border border-gray-500 rounded-lg">
+                        {w}
+                      </div>
+                    )
+              })}
             </div>
-
-          </li>
-
+            <hr className='my-3 h-px bg-gray-300 drop-shadow border-0'/>
+            </li>
+          
+          {/* EDUCATION */}
           <li className="font-bold text-lg mt-4">EDUCATION
             <ul className="font-normal text-base">
               
@@ -218,7 +113,7 @@ export const SideBar=()=>{
 
             </ul>
             </li>
-
+          <hr className='my-3 h-px bg-gray-300 drop-shadow border-0'/>
         </ul>
       </div>
     </aside>

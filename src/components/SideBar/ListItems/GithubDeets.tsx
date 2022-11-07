@@ -1,9 +1,8 @@
 import React from 'react';
 import { SideListTag } from './SideListTag';
 
-export const GithubDeets= ({linktext, link})=> {
+export const GithubDeets= ({alinkclass="", linktext, link})=> {
     return (
-
     <SideListTag 
         paths={
             <>
@@ -11,7 +10,7 @@ export const GithubDeets= ({linktext, link})=> {
             </>
         }
         spanprops={
-            <a href={link} target={"_blank"}>{linktext}</a>
+            <a className={alinkclass} href={link} target={"_blank"}>{linktext}</a>
         }
     />
     )

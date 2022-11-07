@@ -1,0 +1,15 @@
+{   
+
+    "languages": ["Rust", "Solidity", "Python", "Javascript/Typescript"],
+    "stack":
+    ["EVM-Stack", "Hardhat",
+    "Solana-Stack", "Metaplex",
+    "Next.Js/React",
+    "MLFlow", "Tensorflow", "Pytorch",
+    "FastApi", "Streamlit", "Airflow", 
+    "HuggingFace NLP", "Spark", "Kafka",
+    "Elasticsearch-Stack", "PostgreSQL",
+    "MongoDB", "Neo4J/Cypher", "Docker", 
+    "Kubernetes"
+    ]
+}
