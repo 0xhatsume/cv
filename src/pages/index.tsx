@@ -41,7 +41,7 @@ const Home: NextPage=()=>{
                   <li>I really LOVE building things since young.</li>
                   <li>Data Scientist/ML Engineer for 7+ years. Active organizer of local DS meetups.</li>
                   <li>{`Crypto in 2017, active Crypto-Twitter Anon in 2021 :)`}</li>
-                  <li>{`Building on EVM chains and Solana currently! Wagmi`}</li>
+                  <li>{`Building on EVM chains and Solana currently. Wagmi! :)`}</li>
                 </ul>
               </div>
             </div>
