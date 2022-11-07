@@ -1,8 +1,10 @@
+import { url } from 'inspector';
 import React from 'react';
 import { 
     EmailDeets, PhoneDeets,
     LocationDeets, GithubDeets 
   } from './ListItems';
+import { isProd, gitAddressPrefix } from '../../config/constants';
 
 export const SideBar=()=>{
   return (
@@ -10,10 +12,16 @@ export const SideBar=()=>{
       <div className="py-4 pl-7 pr-3 h-full
       bg-gray-50 rounded dark:bg-gray-800">
         
-        
+        <div className="w-56 h-60 mt-1 mb-2 
+          overflow-hidden
+          border-2 border-gray-100/25
+          rounded-3xl
+          ">
+          <img className="" src={`${isProd ? gitAddressPrefix : ''}/img/hatsumedev.jpg`}/>
+          </div>
         <ul className="">
 
-          <li className="font-bold text-lg my-2">CONTACT
+          <li className="font-bold text-lg my-2 mt-5">CONTACT
             <ul className="font-normal flex flex-col mt-1 pl-1">
               <EmailDeets linktext="0xhatsume@gmail.com"/>
               <PhoneDeets linktext={"(upon request)"}/>
@@ -22,8 +30,8 @@ export const SideBar=()=>{
             </ul>
           </li>
 
-          <li className='mt-7'>
-            <div className='font-bold text-lg mt-7'>
+          <li>
+            <div className='font-bold text-lg mt-4'>
             SKILLS/STACK
               </div> 
             <div className='font-normal text-base pt-3
@@ -191,17 +199,17 @@ export const SideBar=()=>{
 
           </li>
 
-          <li className="font-bold text-lg mt-7">EDUCATION
+          <li className="font-bold text-lg mt-4">EDUCATION
             <ul className="font-normal text-base">
               
-              <ul className='my-2'>
+              <ul className='text-sm mt-1.5'>
                 <li >Masters of Science</li>
                 <li>Business Analytics</li>
                 <li >National University of Singapore</li>
                 <li className='text-xs'>2013 - 2014 (Singapore)</li>
               </ul>
 
-              <ul className='my-3'>
+              <ul className='text-sm mt-2'>
                 <li >Bachelor of Engineering</li>
                 <li>Mechanical Engineering</li>
                 <li>Nanyang Technological University</li>
