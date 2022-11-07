@@ -24,8 +24,9 @@ export const SideBar=()=>{
         <ul className="">
           
           {/* CONTACTS */}
-          <li className="font-bold text-lg my-2 mt-5">CONTACT
-            <ul className="font-normal flex flex-col mt-1 pl-1">
+          <li className="font-bold text-lg my-2 mt-5">
+            <div className='ml-0.5'>CONTACT</div>
+            <ul className="font-normal flex flex-col mt-1">
               <TwitterDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://twitter.com/0xhatsume" linktext="twitter.com/0xhatsume"/>
               <TelegramDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://t.me/oxHatsume" linktext="t.me/oxHatsume"/>
               <GithubDeets alinkclass="underline text-blue-700 hover:text-blue-300" 
@@ -36,6 +37,8 @@ export const SideBar=()=>{
               
             </ul>
             </li>
+
+          <hr className='my-3 h-px bg-gray-300 drop-shadow border-0'/>
 
           {/* SKILL/STACK */}
           <li>
@@ -94,7 +97,8 @@ export const SideBar=()=>{
             </li>
           
           {/* EDUCATION */}
-          <li className="font-bold text-lg mt-4">EDUCATION
+          <li className="font-bold text-lg mt-4">
+            <div className=''>EDUCATION</div>
             <ul className="font-normal text-base">
               
               <ul className='text-sm mt-1.5'>
