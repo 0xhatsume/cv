@@ -6,12 +6,12 @@ const Home: NextPage=()=>{
   return (
     <div className="flex flex-row justify-center">
       <div className="flex flex-row 
-          border border-x-gray-700/50
+          border border-gray-700/50 h-full
           "
           style={{width:"975px"}}
           >
         <SideBar/>
-        <div className="w-full">
+        <div className="w-full h-full">
 
           {/* Banner */}
           <div className="h-40 bg-gray-800
@@ -27,6 +27,7 @@ const Home: NextPage=()=>{
 
             </div>
           
+          {/* Right Content */}
           <div className='px-12 my-5'>
 
             {/* About Section */}
@@ -48,14 +49,14 @@ const Home: NextPage=()=>{
             <hr className='my-2 h-px bg-gray-300 drop-shadow border-0'/>
 
             {/* Projects Section */}
-            <div className='mt-5'>
+            <div className='mt-7'>
               <div className='font-bold text-black text-2xl my-4'>
                 Projects <span className="font-normal text-base">(Crypto)</span>
               </div>
 
               {/* PlateDao */}
               <div className='my-4 mt-5'>
-                <div className='font-bold mb-2'>PlateDAO</div>
+                <div className='font-bold text-lg mb-2'>PlateDAO</div>
                 <div className="flex flex-row justify-center items-center
                 space-x-1 px-2
                 w-full
@@ -86,16 +87,16 @@ const Home: NextPage=()=>{
               </div>
 
               {/* Dutch Contract Gig */}
-              <div className='my-4'>
-                <div className='font-bold mb-2'>Dutch Auction Contract</div>
+              <div className='my-4 mt-5'>
+                <div className='font-bold text-lg mb-2'>Dutch Auction Contract</div>
                 <ul className='list-disc text-base px-5'>
                   <li>Coded, verified dutch auction contract for UMAMI token distribution plans.</li>
                   </ul>
               </div>
               
               {/* Shizzy Gig */}
-              <div className='my-4'>
-                <div className='font-bold mb-2'>Private Artist Creator Contract</div>
+              <div className='my-4 mt-5'>
+                <div className='font-bold text-lg mb-2'>Private Artist Creator Contract</div>
                 <ul className='list-disc text-base px-5'>
                   <li>Designed/built private contract for Crypto Artist  
                     <span><a className="ml-2 text-blue-700 hover:text-blue-400" href="https://twitter.com/AizawaShizuka" target={"_blank"}>
@@ -109,16 +110,53 @@ const Home: NextPage=()=>{
             <hr className='my-2 h-px bg-gray-300 drop-shadow border-0'/>
 
             {/* Work Experiences */}
-            <div className='mt-5'>
-              <div className='font-bold text-black text-2xl my-2'>
+            <div className='mt-7'>
+              <div className='font-bold text-black text-2xl my-2 mb-4'>
                 Work Experiences <span className="font-normal text-base">(Request to reveal company name.)</span>
+              </div>
+
+              <div className='my-4 mt-6'>
+                <div className='font-bold text-lg'>Health Insurance Company in FTSE 100</div>
+                <div className='flex flex-row justify-between'>Data Scientist/ ML Engineer (Regional HQ)
+                  <span>2020 - 2021</span>
+                </div>
+              </div>
+
+              <div className='my-4 mt-5'>
+                <div className='font-bold text-lg'>Computer Vision Startup <span className='font-normal'> (bought over by company above)</span></div>
+                <div className='flex flex-row justify-between'>ML Engineer / Developer (Regional HQ)
+                  <span>2019 - 2020</span>
+                </div>
+              </div>
+
+              <div className='my-4 mt-5'>
+                <div className='font-bold text-lg'>A Tech Consulting Company <span className='font-normal'>(World Top 10)</span></div>
+                <div className='flex flex-row justify-between'>Data Scientist / Developer
+                  <span>2017 - 2019</span>
+                </div>
+              </div>
+
+              <div className='my-4 mt-5'>
+                <div className='font-bold text-lg'>Region's Top Digital Bank</div>
+                <div className='flex flex-row justify-between'>Data Scientist
+                  <span>2014 - 2017</span>
+                </div>
               </div>
 
             </div>
 
           </div>
+
+          {/* Blank Area */}
+          <div className='my-4 h-px'/>
+
+          {/* Footer? */}
+          <div className='w-full h-10 bg-gray-800'>
+            </div>
         </div>
+        
       </div>
+        
     </div>
   )
 }

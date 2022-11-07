@@ -10,8 +10,8 @@ import CVjson from '../../config/cvfields/cv.json';
 
 export const SideBar=()=>{
   return (
-    <aside className="w-72 h-full">
-      <div className="py-4 pl-7 pr-3 h-full
+    <aside className="w-72">
+      <div className="py-4 pl-7 pr-3 h-full 
       bg-gray-100 rounded dark:bg-gray-800">
         
         <div className="w-56 h-60 mt-1 mb-2 
