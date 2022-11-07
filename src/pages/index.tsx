@@ -4,9 +4,11 @@ import { SideBar } from '../components';
 const Home: NextPage=()=>{
   return (
     <div className="flex flex-row justify-center">
-      <div className="w-3/5 flex flex-row 
+      <div className="flex flex-row 
           border border-x-gray-700/50
-          ">
+          "
+          style={{width:"1100px"}}
+          >
         <SideBar/>
         <div className="w-full">
           <div className="h-40 bg-gray-800
