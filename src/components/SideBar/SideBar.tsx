@@ -12,7 +12,7 @@ export const SideBar=()=>{
   return (
     <aside className="w-72">
       <div className="py-4 pl-7 pr-3 h-full 
-      bg-gray-100 rounded dark:bg-gray-800">
+      bg-gray-100 dark:bg-gray-800">
         
         <div className="w-56 h-60 mt-1 mb-2 
           overflow-hidden
@@ -24,12 +24,12 @@ export const SideBar=()=>{
         <ul className="">
           
           {/* CONTACTS */}
-          <li className="font-bold text-lg my-2 mt-5">
+          <li className="font-bold text-lg my-2 mt-5 text-white">
             <div className='ml-0.5'>CONTACT</div>
             <ul className="font-normal flex flex-col mt-1">
-              <TwitterDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://twitter.com/0xhatsume" linktext="twitter.com/0xhatsume"/>
-              <TelegramDeets alinkclass="underline text-blue-700 hover:text-blue-300" link="https://t.me/oxHatsume" linktext="t.me/oxHatsume"/>
-              <GithubDeets alinkclass="underline text-blue-700 hover:text-blue-300" 
+              <TwitterDeets alinkclass="underline text-blue-500 hover:text-blue-300" link="https://twitter.com/0xhatsume" linktext="twitter.com/0xhatsume"/>
+              <TelegramDeets alinkclass="underline text-blue-500 hover:text-blue-300" link="https://t.me/oxHatsume" linktext="t.me/oxHatsume"/>
+              <GithubDeets alinkclass="underline text-blue-500 hover:text-blue-300" 
                 link="https://github.com/0xhatsume" linktext="github.com/0xhatsume"/>
               <EmailDeets linktext="0xhatsume@gmail.com"/>
               {/* <PhoneDeets linktext={"(upon request)"}/> */}
@@ -42,7 +42,7 @@ export const SideBar=()=>{
 
           {/* SKILL/STACK */}
           <li>
-            <div className='font-bold text-lg mt-4'>
+            <div className='font-bold text-lg mt-4 text-white'>
             SKILLS/STACK
               </div> 
             <div className='font-normal text-base pt-3
@@ -97,7 +97,7 @@ export const SideBar=()=>{
             </li>
           
           {/* EDUCATION */}
-          <li className="font-bold text-lg mt-4">
+          <li className="font-bold text-lg mt-4 text-white">
             <div className=''>EDUCATION</div>
             <ul className="font-normal text-base">
               
